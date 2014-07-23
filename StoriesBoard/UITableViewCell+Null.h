@@ -10,6 +10,6 @@
 
 @interface UITableViewCell (Null)
 
-+ (UITableViewCell *)HLY_nullCell;
++ (UITableViewCell *)HLY_nullCellWithTableView:(UITableView *)tableView;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "HLYShareViewController.h"
-#import "UIView+ModifyFrame.h"
+#import "UIView+Frame.h"
 
 @interface HLYShareViewController ()
 
@@ -95,7 +95,7 @@
 
 - (void)hwdRightItemDidTapped:(id)sender
 {
-    DLog(@"发布");
+    NSLog(@"发布");
 }
 
 @end

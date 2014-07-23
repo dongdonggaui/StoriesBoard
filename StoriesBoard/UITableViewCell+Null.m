@@ -10,9 +10,12 @@
 
 @implementation UITableViewCell (Null)
 
-+ (UITableViewCell *)HLY_nullCell
++ (UITableViewCell *)HLY_nullCellWithTableView:(UITableView *)tableView
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"nullCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"nullCell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"nullCell"];
+    }
     cell.textLabel.text = NSLocalizedString(@"暂无数据", @"");
     cell.textLabel.textColor = [UIColor lightGrayColor];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
